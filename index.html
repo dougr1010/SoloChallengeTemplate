@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	  <meta charset="UTF-8">
+   	  <title>Title</title>
+      <link rel="stylesheet" href="file.css"/>
+
+   </head>
+
+   <body>
+
+      <h1>SoloChallengeTemplate</h1>
+
+<!--This is our template. -->
+<!--Data will be inserted in its according place, replacing the brackets.-->
+<script id="myTemplate" type="text/x-handlebars-template">
+  <p>First name: {{fName}},   Last name: {{lName}}<br/>
+     Lives in: {{city}}.<br/>
+     Favorite thing to do is {{sport}}.<br/>
+     When not working I sometimes pretend to be a {{hobby}}.<br/>
+     <br/>
+     I paddle these boats:
+     {{#each boats}}
+        <p>{{make}} {{model}}</p>
+     {{/each}}
+</script>
+
+<!--Your new content will be displayed in here-->
+<div class="content-placeholder"></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script type="text/javascript" src="file.js"></script>
+
+   </body>
+</html>
