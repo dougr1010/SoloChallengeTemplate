@@ -14,15 +14,17 @@
 <!--This is our template. -->
 <!--Data will be inserted in its according place, replacing the brackets.-->
 <script id="myTemplate" type="text/x-handlebars-template">
-  <p>First name: {{fName}},   Last name: {{lName}}<br/>
+  <p>First name: <b>{{fName}}</b>,   Last name: <b>{{lName}}</b><br/>
      Lives in: {{city}}.<br/>
      Favorite thing to do is {{sport}}.<br/>
      When not working I sometimes pretend to be a {{hobby}}.<br/>
      <br/>
      I paddle these boats:
      {{#each boats}}
-        <p>{{make}} {{model}}</p>
+        <p>{{#uppercase}}{{make}}{{/uppercase}} {{model}}</p>
      {{/each}}
+     <p>Time to test out the escaped javascript function:<br/>
+     {{{jsInsert}}}</p>
 </script>
 
 <!--Your new content will be displayed in here-->

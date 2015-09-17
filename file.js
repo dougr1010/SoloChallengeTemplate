@@ -22,8 +22,13 @@ $(document).ready(function(){
 	    	{make: "Dagger", model: "Nomad"},
 	    	{make: "Jackson", model: "AllStar"},
 	    	{make: "Perception", model: "Pirouette"}
-	    ]
+	    ],
+	    "jsInsert": "<h1><Here it is, raw javascript!/h1>"
 	  };
+
+	  Handlebars.registerHelper('uppercase',function(options){
+	  	return options.fn(this).toUpperCase();
+	  });
 
 	  // Pass our data to the template
 	  var theCompiledHtml = theTemplate(context);
